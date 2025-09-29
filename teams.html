@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+ body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+ header { padding: 16px 24px; background: #111827; border-bottom: 1px solid #1f2937; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:10 }
+ header h1 { margin:0; font-size:20px }
+ nav .tab { margin-left: 12px; color:#cbd5e1; text-decoration:none; padding:6px 10px; border:1px solid #374151; border-radius:6px; background:#1f2937 }
+ nav .active { background:#0b1220; color:#fff }
+ .container { padding: 16px; max-width: 1300px; margin: 0 auto; }
+ .card { background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 12px; margin: 12px 0 }
+ .section-title { font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #f1f5f9; }
+ .kpi-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+      .kpi-table th {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        color: #f1f5f9;
+        padding: 12px 16px;
+        text-align: left;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        border: none;
+      }
+      .kpi-table td {
+        background: #1e293b;
+        color: #e2e8f0;
+        padding: 12px 16px;
+        border: none;
+        border-bottom: 1px solid #334155;
+      }
+      .kpi-table tr:last-child td {
+        border-bottom: none;
+      }
+      .kpi-table tr:hover td {
+        background: #334155;
+        transition: background-color 0.2s ease;
+      }
+      .kpi-table a {
+        color: white !important;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+      }
+      .kpi-table a:hover {
+        color: #f1f5f9 !important;
+        text-decoration: underline;
+      }
+      /* Rank-based coloring for better visual hierarchy */
+      .kpi-table tr:nth-child(1) td { background: #eab308; } /* Holden - Yellow */
+      .kpi-table tr:nth-child(2) td,
+      .kpi-table tr:nth-child(3) td,
+      .kpi-table tr:nth-child(4) td { background: #059669; } /* Positions 2-4 - Green */
+      .kpi-table tr:nth-child(5) td,
+      .kpi-table tr:nth-child(6) td,
+      .kpi-table tr:nth-child(7) td,
+      .kpi-table tr:nth-child(8) td { background: #0284c7; } /* Positions 5-8 - Light Blue */
+      .kpi-table tr:nth-child(9) td,
+      .kpi-table tr:nth-child(10) td,
+      .kpi-table tr:nth-child(11) td,
+      .kpi-table tr:nth-child(12) td,
+      .kpi-table tr:nth-child(13) td { background: #dc2626; } /* Positions 9-13 - Red */
+ a.btn { display:inline-block; margin:6px 8px 0 0; background:#1f2937; color:#e5e7eb; border:1px solid #374151; border-radius:6px; padding:6px 10px; text-decoration:none }
+</style><script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script><title>Chad's Place Fantasy Dashboard</title></head><body><header><h1>Chad's Place Fantasy Dashboard</h1><nav><a href="chad_dashboard.html" class="tab ">Dashboard</a><a href="teams.html" class="tab active">Teams</a></nav></header><div class="container"><div class="card"><div class="section-title">Team Summaries</div><table class="kpi-table"><thead><tr><th>Team</th><th>Avg</th><th>StdDev</th><th>1st Days</th><th>LeadDays</th><th>Best</th><th>Worst</th><th>Momentum</th></tr></thead><tbody><tr><td><a href="team_Holden.html">Holden</a></td><td>1.40</td><td>1.04</td><td>147</td><td>148</td><td>1</td><td>8</td><td>0.40</td></tr><tr><td><a href="team_Nathan.html">Nathan</a></td><td>2.69</td><td>1.22</td><td>20</td><td>20</td><td>1</td><td>8</td><td>0.69</td></tr><tr><td><a href="team_Jonathon.html">Jonathon</a></td><td>3.60</td><td>1.87</td><td>4</td><td>4</td><td>1</td><td>10</td><td>0.60</td></tr><tr><td><a href="team_Youngkin.html">Youngkin</a></td><td>3.67</td><td>1.24</td><td>1</td><td>2</td><td>1</td><td>10</td><td>-0.33</td></tr><tr><td><a href="team_Jake.html">Jake</a></td><td>4.82</td><td>1.40</td><td>14</td><td>14</td><td>1</td><td>8</td><td>-0.75</td></tr><tr><td><a href="team_Scott.html">Scott</a></td><td>7.24</td><td>1.98</td><td>0</td><td>0</td><td>4</td><td>13</td><td>1.81</td></tr><tr><td><a href="team_Connor.html">Connor</a></td><td>7.31</td><td>1.88</td><td>2</td><td>2</td><td>1</td><td>11</td><td>0.31</td></tr><tr><td><a href="team_Tom.html">Tom</a></td><td>8.78</td><td>1.75</td><td>0</td><td>0</td><td>3</td><td>11</td><td>-0.36</td></tr><tr><td><a href="team_Bob.html">Bob</a></td><td>7.37</td><td>1.54</td><td>0</td><td>0</td><td>4</td><td>13</td><td>-1.20</td></tr><tr><td><a href="team_Jackson.html">Jackson</a></td><td>11.14</td><td>1.25</td><td>0</td><td>0</td><td>8</td><td>13</td><td>2.00</td></tr><tr><td><a href="team_Ed_Blake.html">Ed/Blake </a></td><td>11.89</td><td>1.61</td><td>0</td><td>0</td><td>4</td><td>13</td><td>-0.11</td></tr><tr><td><a href="team_Ryan.html">Ryan</a></td><td>8.87</td><td>1.91</td><td>0</td><td>0</td><td>4</td><td>13</td><td>-2.41</td></tr><tr><td><a href="team_Anthony.html">Anthony</a></td><td>11.82</td><td>1.47</td><td>0</td><td>0</td><td>5</td><td>13</td><td>-0.90</td></tr></tbody></table></div></div></body></html>
